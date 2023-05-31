@@ -1,9 +1,19 @@
+@import url('https://fonts.cdnfonts.com/css/supernatural-knight'); 
+html{
+    
+  background: #000000;
+  box-shadow: inset 10px 20px 250px rgba(46, 92, 255, 0.25);
+}
 body {
   margin: 0;
   padding: 0;
   font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: black;
+  background: #000000;
+  box-shadow: inset 10px 20px 250px rgba(46, 92, 255, 0.25);
+  overflow-y: hidden;
+
 }
+body
 
 :root {
   --tamanho-header: 80px;
@@ -17,15 +27,17 @@ body {
   display: flex;
   width: 80%;
   margin: auto;
+
 }
 
 .header {
   height: var(--tamanho-header);
   border-bottom: 2px solid #32b9cd;
+  background-color: #000000;
 }
 
 .header .container {
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 100%;
 }
@@ -49,35 +61,93 @@ body {
 }
 
 .titulo {
-  color: #32b9cd;
-  width: fit-content;
-  font-weight: 500;
+  background-image: url(../assets/estrelahome.png);
+  background-repeat: no-repeat;
+  background-position: center;
+background-size: cover;
+  height: 80px;
+  color: aqua;
+  width: 80px;
+  position: absolute;
 }
-
-.header h1 {
-  margin: 0;
+.titulo2 {
+  background-image: url(../assets/nomehome.png);
+  background-repeat: no-repeat;
+  background-position: center;
+background-size: cover;
+  height: 80px;
+  color: aqua;
+  width: 500px;
 }
 
 .banner {
-  height: var(--tamanho-banner);
-  background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
-  background-size: cover;
+  justify-content: space-around;
+  width: 100%;
+  height: 90vh;
+  
+  background: #000000;
+  box-shadow: inset 10px 20px 250px rgba(46, 92, 255, 0.25);
+}
+#imagemfundo{
+position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		
+			max-width: 100%;
+			height: auto;
+
 }
 
 .banner .container {
   justify-content: center;
   align-items: center;
   height: 100%;
-}
+  display: flex;
+  flex-wrap: wrap ;
 
-.banner .container p {
-  font-size: 36px;
-  color: white;
-  width: 280px;
 }
 
 .banner .container span {
-  font-weight: 800;
+  font-size: 36px;
+  color: white;
+  text-align: center;
+  font-family: 'Supernatural Knight', sans-serif;
+
+}
+#mensagemHome2{
+  color: transparent;
+  animation: aparecer 4s ease-in;
+}
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#diarioJohn{
+  position: absolute;
+  display: none;
+  left: 1%;
+  right: 1%;
+  opacity: 0.02;
+  z-index: 0;
+  width: 200px;
+  height: 200px;
+  cursor: crosshair;
+  
+}
+#videoIntro{
+  opacity: 1;
+  z-index: 10;
+}
+#diarioJohn:hover{
+  opacity: 1;
 }
 
 .social {
