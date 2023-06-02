@@ -16,44 +16,43 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="css/cssLogin.css">
 </head>
 
-<body>
+<body id="body">
 
     <!--Header-->
 
+    <!-- <img id="imagemfundo" src="assets/imagemfundo.png" alt=""> -->
     <div class="header">
         <div class="container">
-            <h1 class="titulo">AquaTech</h1>
-            <ul class="navbar">
-                <li>
-                    <a href="index.html">Inicial</a>
-                </li>
-                <li>
-                    <a href="simulador.html">Simulador</a>
-                </li>
-                <li>|</li>
-                <li class="agora">
-                    <a href="#">Login</a>
-                </li>
-                <li>
-                    <a href="cadastro.html">Cadastro</a>
-                </li>
-            </ul>
+            <span class="titulo"></span>
+            <div id="navbar">
+                <a href="#navHistoria">
+                    <h3>Historia</h3>
+                </a> <a href="#navPersonagens">
+                    <h3>Personagens</h3>
+                </a> <span class="titulo2"></span> <a href="login.html">
+                    <h3>Login</h3>
+                </a> <a href="#">
+                    <h3>Cadastro</h3>
+                </a>
+            </div>
         </div>
     </div>
 
 
     <div class="login">
-        <div class="alerta_erro">
+        <!-- <div class="alerta_erro">
             <div class="card_erro" id="cardErro">
                 <span id="mensagem_erro"></span>
             </div>
-        </div>
+        </div> -->
         <div class="container">
-            <div class="card card-login">
-                <h2>Olá de volta!</h2>
+            <div class="card-login">
+
                 <div class="formulario">
+                    <h2>Olá de volta!</h2>
                     <div class="campo">
                         <span>E-mail:</span>
                         <input id="email_input" type="text" placeholder="Login">
@@ -66,23 +65,24 @@
                 </div>
 
                 <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
+                    <img style="display:none" src="./assets/circle-loading.gif" id="loading-gif">
                 </div>
 
-                <div id="div_erros_login"></div>
+                <!-- <div id="div_erros_login"></div> -->
             </div>
         </div>
     </div>
 
+
     <!--footer inicio-->
+
+    <!--footer fim-->
     <div class="footer">
         <div class="container">
             <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
             <span class="version">v1.0.0</span>
         </div>
     </div>
-    <!--footer fim-->
-
 </body>
 
 </html>
