@@ -76,3 +76,17 @@ flex-wrap: nowrap;
     text-align: center;
     font-size: 22px;
   }
+  .mural{
+    width: 100%;
+  top: 0;
+  background: #000000;
+  box-shadow: inset 10px 20px 250px rgba(46, 92, 255, 0.25);
+  height: 120vh;
+  }
+  .mural .container{
+    display: flex;
+    flex-direction: column;
+  }
+  .mural .container p{
+    margin: 0;
+  }
