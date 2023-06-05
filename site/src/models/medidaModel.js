@@ -14,11 +14,11 @@ function buscarUltimasMedidas(idAquario, limite_linhas) {
     //                 where fk_aquario = ${idAquario}
     //                 order by id desc`;}
     if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select (SELECT COUNT(temporadasassistidas) from usuario where temporadasassistidas = 1 or temporadasassistidas = 0) as um_zero,
-        (SELECT COUNT(temporadasassistidas) from usuario where temporadasassistidas > 1 and temporadasassistidas <= 5)                      as dois_cinco,
-        (SELECT COUNT(temporadasassistidas) from usuario where temporadasassistidas >= 6 and temporadasassistidas <= 9)                     as seis_nove,
-        (SELECT COUNT(temporadasassistidas) from usuario where temporadasassistidas >= 10 and temporadasassistidas <= 14)                   as dez_catorze,
-        (SELECT COUNT(temporadasassistidas) from usuario where temporadasassistidas = 15)                                                   as todas;`;
+        instrucaoSql = `select (SELECT COUNT(temporadaVista) from temporadas where temporadaVista = 1 or temporadaVista = 0) as um_zero,
+        (SELECT COUNT(temporadaVista) from temporadas where temporadaVista > 1 and temporadaVista <= 5)                      as dois_cinco,
+        (SELECT COUNT(temporadaVista) from temporadas where temporadaVista >= 6 and temporadaVista <= 9)                     as seis_nove,
+        (SELECT COUNT(temporadaVista) from temporadas where temporadaVista >= 10 and temporadaVista <= 14)                   as dez_catorze,
+        (SELECT COUNT(temporadaVista) from temporadas where temporadaVista = 15)                                                       as todas;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return

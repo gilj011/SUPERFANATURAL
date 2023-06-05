@@ -65,9 +65,8 @@ var database = require("../database/config");
 function publicar(temporada, idUsuario) {
     console.log("ACESSEI O AVISO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function publicar(): ", temporada, idUsuario);
     var instrucao = `
-    UPDATE usuario
-    SET temporadasassistidas = ${temporada}
-    WHERE id = ${idUsuario};
+    insert into temporadas
+    values (${idUsuario}, ${temporada});        
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);

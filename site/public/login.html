@@ -34,7 +34,7 @@
                     <h3>Personagens</h3>
                 </a> <span class="titulo2"></span> <a href="login.html">
                     <h3>Login</h3>
-                </a> <a href="#">
+                </a> <a href="cadastro.html">
                     <h3>Cadastro</h3>
                 </a>
             </div>
@@ -54,8 +54,8 @@
                 <div class="formulario">
                     <h2>Olá de volta!</h2>
                     <div class="campo">
-                        <span>E-mail:</span>
-                        <input id="email_input" type="text" placeholder="Login">
+                        <span>Userame: </span>
+                        <input id="email_input" type="text" placeholder="Username">
                     </div>
                     <div class="campo">
                         <span>Senha:</span>
@@ -79,8 +79,8 @@
     <!--footer fim-->
     <div class="footer">
         <div class="container">
-            <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
-            <span class="version">v1.0.0</span>
+            <h4>Superfanatural  </h4>
+           
         </div>
     </div>
 </body>
@@ -130,10 +130,10 @@
 
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.ID_USUARIO = json.idUsuario;
 
                     setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
+                        window.location = "./dashboard/mural.html";
                     }, 1000); // apenas para exibir o loading
 
                 });

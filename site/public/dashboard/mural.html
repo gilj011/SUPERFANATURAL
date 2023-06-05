@@ -8,8 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AquaTech | Avisos</title>
 
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="./dashboards.css">
+    <link rel="stylesheet" href="../css/cssMural.css">
     <script src="../js/funcoes.js"></script>
     <script src="./alerta.js"></script>
 
@@ -31,50 +30,63 @@
                 <span class="titulo"></span>
 
                 <div id="navbar">
-                    <a href="#navHistoria">
+                    <a href="../home.html#navHistoria">
                         <h3>Historia</h3>
-                    </a> <a href="#navPersonagens">
+                    </a> <a href="../home.html#navPersonagens">
                         <h3>Personagens</h3>
-                    </a> <span class="titulo2"></span> <a href="#">
+                    </a> <span class="titulo2"></span> <a href="login.html">
                         <h3>Login</h3>
-                    </a> <a href="#">
+                    </a> <a href="cadastro.html">
                         <h3>Cadastro</h3>
                     </a>
                 </div>
+
+
+
             </div>
         </div>
 
         <div class="mural">
             <div class="container">
-                <p>Nos sabemos que supernatural é uma serie muito amada por diversas pessoas do mundo, mas será que
-                    você é realmente um fã da série?<br>
-                    Nesta pagina temos um local onde podemos ver quais temporadas os fãs da
-                    série que compareceram nesse site e compartilharam conosco o quanto apreciaram desta incrível
-                    que tanto amamos</p>
-<br>
-            <p>E logo abaixo temos um campo onde você pode colaborar conosco e nossa comunidade compartilhando até qual temporada você assitiu!</p>
+                <p>Nos sabemos que supernatural é uma serie muito amada por diversas pessoas do mundo, mas será que você
+                    é realmente um fã da série?<br>
+                    Nesta pagina temos um local onde podemos ver quais temporadas os fãs da série que compareceram nesse
+                    site e compartilharam conosco o quanto apreciaram desta incrível que tanto amamos<br>
+                    Até qual temporada você assistiu ?
                 <form id="form_postagem" method="post" onsubmit="return publicar()">
 
                     <label>
-                        Quantas temporadas?
+
                         <br>
-                        <input name="temporada" id="input_temporada" maxlength="2" type="number">
+                        <input  min="0" max="15" name="temporada" id="input_temporada" maxlength="2" type="number">
                     </label>
                     <br>
                     <br>
-                    <button>Enviar</button>
+
+                    <button id="btn_POST" onclick="aparecergif()" class="btn-chart">Enviar</button><br>
+                    <img id="deanGIF" style="display: none;" src="../assets/dean.gif" alt="" width="50%" height="50%">
                 </form>
-            </div>
+                <button style="display: none;
+                width: 300px;" class="btn-chart" id="btn_REDIRECT" onclick="irGrafico()" class="btn-chart">Ver grafico
+                    de temporadas assistidas</button><br>
+
+                <button style="display: none;
+                    width: 300px;" class="btn-chart" id="btn_CALCULO" onclick="calcTempo()" class="btn-chart">Ver o tempo assitindo
+                    supernatural</button><br>
+                    <div id="resultado">
+
+                    </div>
             </div>
         </div>
+    </div>
 
 
 
 
 
 
-        <!-- MODAL -->
-        <!-- <div id="div_modal" class="div-modal">
+    <!-- MODAL -->
+    <!-- <div id="div_modal" class="div-modal">
                 <div id="modal_backdrop" onclick="fecharModal()" class="modal-backdrop">
                 </div>
                 <div id="modal_container" class="modal-container">
@@ -82,8 +94,8 @@
                 </div>
             </div> -->
 
-        <!-- AGUARDAR -->
-        <!-- <div id="div_aguardar" class="div-aguardar">
+    <!-- AGUARDAR -->
+    <!-- <div id="div_aguardar" class="div-aguardar">
                 <img src="./assets/aguarde-pink3.gif" id="img_aguarde">
             </div>  -->
 
@@ -98,7 +110,50 @@
 </html>
 
 <script>
+    var temporadaatual = 0;
+   
+    function calcTempo() {
+     
+        resultado.innerHTML = ""
+        var calculo = {
+            episodio:0,
+            minuto:0,
+            hora:0,
+            segundo:0,
+            dia:0
+        }
+        calculo.episodio = (temporadaatual * 21).toFixed(2)
+        calculo.minuto = (calculo.episodio * 42).toFixed(2)
+        calculo.hora = (calculo.minuto / 60).toFixed(2)
+        calculo.segundo = (calculo.minuto * 60).toFixed(2)
+        calculo.dia = (calculo.hora / 24).toFixed(2)
 
+        resultado.innerHTML += `
+        <span>Você assistiu: ${calculo.episodio} episodios desupernatural</span><br> 
+        <span>Você assistiu: ${calculo.hora} horas de supernatural</span><br>
+        <span>Você passou: ${calculo.dia} dias vendo supernatural</span><br>
+        <span>Você assistiu: ${calculo.minuto} minutos de supernatural</span><br>
+        <span>Você passou: ${calculo.segundo} segundos assistindo supernatural</span><br>
+
+
+        `
+    }
+    function aparecergif() {
+        if (input_temporada.value == "" || input_temporada.value < 0 || input_temporada.value > 15) {
+            alert(`Supernatural tem 15 temporadas, se não assistiu nehuma digite 0`)
+        } else {
+            temporadaatual = input_temporada.value
+            deanGIF.style.display = 'block'
+            btn_POST.style.display = 'none'
+            btn_REDIRECT.style.display = 'block'
+            btn_CALCULO.style.display = 'block'
+            input_temporada.style.display = 'none'
+
+        }
+    }
+    function irGrafico() {
+        window.location = "/dashboard/dashboard.html"
+    }
     // b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
     function limparFormulario() {
@@ -106,8 +161,8 @@
     }
 
     function publicar() {
-        // var idUsuario = sessionStorage.ID_USUARIO;
-var idUsuario = 1;
+        var idUsuario = sessionStorage.ID_USUARIO;
+
         var corpo = {
             temporada: form_postagem.input_temporada.value,
         }
@@ -123,10 +178,10 @@ var idUsuario = 1;
             console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                window.alert("Post realizado com sucesso pelo usuario de ID: " + idUsuario + "!");
-                window.location = "/dashboard/mural.html";
+                window.alert("Obrigado por contribuir com nosso blog <3  Usuario ID:" + idUsuario + "!");
+                // window.location = "/dashboard/mural.html";
                 limparFormulario();
-                finalizarAguardar();
+                // finalizarAguardar();
             } else if (resposta.status == 404) {
                 window.alert("Deu 404!");
             } else {
@@ -134,7 +189,7 @@ var idUsuario = 1;
             }
         }).catch(function (resposta) {
             console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
+            // finalizarAguardar();
         });
 
         return false;

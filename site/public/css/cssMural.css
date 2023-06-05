@@ -1,0 +1,150 @@
+@import url('https://fonts.cdnfonts.com/css/supernatural-knight'); 
+*{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+html{
+   
+
+  box-shadow: inset 10px 20px 250px rgba(46, 92, 255, 0.25);
+}
+body, html{
+    height: 100%;
+    margin: 0;
+  }
+
+
+
+:root {
+  --tamanho-header: 80px;
+  --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+  --tamanho-simulador: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+  --tamanho-login: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
+  --tamanho-footer: 65px;
+}
+
+.container {
+  display: flex;
+  width: 80%;
+  margin: auto;
+
+}
+.header .container h2{
+  color: wheat;
+}
+
+.header {
+  height: 80px;
+  border-bottom: 2px solid rgb(2, 2, 99);
+  background-color: #000000;
+  margin: 0px;
+  width: 100%;
+  
+}
+
+.header .container {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.header a {
+  text-decoration: none;
+  color: #e3b062;
+  
+}
+.header h3{
+  margin: 0;
+  width: 122px;
+}
+
+.janela{
+    height:100%
+}
+
+
+
+.titulo {
+  background-image: url(../assets/estrelahome.png);
+background-size: cover;
+  height: 80px;
+  width: 80px;
+  position: absolute;
+}
+.titulo2 {
+  background-image: url(../assets/nomehome.png);
+  background-repeat: no-repeat;
+  background-position: center;
+background-size: cover;
+  height: 80px;
+  color: aqua;
+  width: 500px;
+
+}
+#navbar{
+  width: 100%;
+display:flex;
+justify-content:space-between;
+align-items: center;
+}
+#navbar h3{
+  color: whitesmoke;
+  font-family: 'Supernatural Knight', sans-serif;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+  .mural{
+width: 100%;
+height: 100%;
+margin: auto;
+background: #000000;
+box-shadow: inset 10px 20px 250px rgba(46, 92, 255, 0.25);  
+
+  }
+  .mural .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .mural .container p{
+    margin: 0;
+    margin-top: 5%;
+    text-align: center;
+    font-size: 25px ;
+  }
+  
+.btn-chart {
+
+    border: 0;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 15px;
+    color: #150063;
+    background-color: white;
+    margin: 5px;
+    border-radius: 3px;
+  }
+  #form_postagem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #form_postagem input{
+    width: 70px;
+height: auto;  
+font-size: 20px;
+font-family: 'Supernatural Knight', sans-serif;
+text-align: center;
+}

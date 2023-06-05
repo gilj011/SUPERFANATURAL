@@ -13,7 +13,7 @@
 
 
     <link rel="icon" href="./assets/icon/favicon2.ico">
-    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="./css/cssCadastro.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -25,22 +25,18 @@
     <!--header inicio-->
     <div class="header">
         <div class="container">
-            <h1 class="titulo">AquaTech</h1>
-            <ul class="navbar">
-                <li>
-                    <a href="index.html">Inicial</a>
-                </li>
-                <li>
-                    <a href="simulador.html">Simulador</a>
-                </li>
-                <li>|</li>
-                <li>
-                    <a href="login.html">Login</a>
-                </li>
-                <li class="agora">
-                    <a href="#">Cadastro</a>
-                </li>
-            </ul>
+            <span class="titulo"></span>
+            <div id="navbar">
+                <a href="#navHistoria">
+                    <h3>Historia</h3>
+                </a> <a href="#navPersonagens">
+                    <h3>Personagens</h3>
+                </a> <span class="titulo2"></span> <a href="login.html">
+                    <h3>Login</h3>
+                </a> <a href="#">
+                    <h3>Cadastro</h3>
+                </a>
+            </div>
         </div>
     </div>
     <!--header fim-->
@@ -53,18 +49,19 @@
             </div>
         </div>
         <div class="container">
-            <div class="card card-cadastro">
-                <h2>Bem-vindo!</h2>
+            <div class="card-login">
+                
                 <div class="formulario">
-
+                    <h2>Olá! cadastre-se agora mesmo!</h2>
+                
                     <!--
                          Para inserir mais um campo, copie uma das inputs abaixo.
                          Assim que inserir vá para o script abaixo.
                      -->
 
                     <div class="campo">
-                        <span>Nome:</span>
-                        <input id="nome_input" type="text" placeholder="Seu nome">
+                        <span>Username:</span>
+                        <input id="nome_input" type="text" placeholder="Seu Userame">
                     </div>
                     <div class="campo">
                         <span>E-mail:</span>
@@ -74,15 +71,12 @@
                         <span>Senha:</span>
                         <input id="senha_input" type="password" placeholder="******">
                     </div>
-                    <div class="campo">
-                        <span>Confirmação da Senha:</span>
-                        <input id="confirmacao_senha_input" type="password" placeholder="******">
-                    </div>
+                    
                     <button class="botao" onclick="cadastrar()">Cadastrar</button>
 
                 </div>
                 <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
+                    <img style="display:none;" src="./assets/circle-loading.gif" id="loading-gif">
                 </div>
 
                 <div id="div_erros_login"></div>
@@ -93,8 +87,8 @@
     <!--footer inicio-->
     <div class="footer">
         <div class="container">
-            <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
-            <span class="version">v1.0.0</span>
+            <h4>Superfanatural  </h4>
+
         </div>
     </div>
     <!--footer fim-->
@@ -113,9 +107,12 @@
         var nomeVar = nome_input.value;
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
-        var confirmacaoSenhaVar = confirmacao_senha_input.value;
+        // var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" 
+        
+        // || confirmacaoSenhaVar == ""
+        ) {
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 

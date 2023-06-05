@@ -54,6 +54,10 @@ body
   color: #e3b062;
   
 }
+.header h3{
+  margin: 0;
+  width: 122px;
+}
 
 
 
@@ -144,18 +148,21 @@ position: absolute;
 .personagensCard 
 {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+    width: 320px;
+  height: 550px;
+  background-color: #0c1f53;
+  margin: 20px;
 
-  align-items:start;
-  width: 300px;
-  height: 450px;
-  background-color: #32b9cd;
-  margin: 50px;
-
+}
+.personagensCard:hover{
+  scale: 1.1;
+  transition: 0.4s;
 }
 .personagensCard img{
   width: 220px;
   height: 180px;
+ 
 }
 .personagensCard h2{
   align-self: flex-start;

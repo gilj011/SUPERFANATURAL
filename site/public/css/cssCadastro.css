@@ -86,7 +86,15 @@ background-position: top;
     background: #000000;
     box-shadow: inset 10px 20px 250px rgba(46, 92, 255, 0.25);
   }
-
+  #imagemfundo{
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              max-width: 100%;
+              height: auto;
+              opacity: 0.5;
+  }
 .login{
 height:80vh;
 
@@ -104,19 +112,18 @@ align-items: center;
   }
   .login .container .card-login{
     background-color: rgba(255, 255, 255, 0.8);
-    height: 400px;
-    width: 500px;
+    height: 500px;
+    width: 600px;
     display: flex ;
     flex-wrap: wrap;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     color: #000000;
     background-image: url(../assets/imagemfundo.png);
     background-position: center;
     background-size: 80%,80%;
  background-repeat: no-repeat;
- 
   }
  
   .formulario{
@@ -140,10 +147,12 @@ align-items: center;
     text-align: center;
     background-color: rgb(34, 34, 34);
     border: none;
-    color: whitesmoke;  
+    color: whitesmoke;
+    font-size: 15px;
    }
    .formulario input:focus{
     text-align: left;
+
 background-color: #0c1f53;
    }
 
