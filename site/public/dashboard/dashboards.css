@@ -90,3 +90,6 @@ flex-wrap: nowrap;
   .mural .container p{
     margin: 0;
   }
+  canvas{
+    color: white;
+  }

@@ -1,7 +1,11 @@
 @import url('https://fonts.cdnfonts.com/css/supernatural-knight'); 
-*{
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
+p{
+  margin: 0px;
 }
+*{
+  font-weight:400;
+  font-family: 'Inter', sans-serif;}
 html{
    
 
@@ -106,7 +110,7 @@ align-items: center;
 
   .mural{
 width: 100%;
-height: 100%;
+height: auto;
 margin: auto;
 background: #000000;
 box-shadow: inset 10px 20px 250px rgba(46, 92, 255, 0.25);  
@@ -116,12 +120,13 @@ box-shadow: inset 10px 20px 250px rgba(46, 92, 255, 0.25);
     display: flex;
     flex-direction: column;
     align-items: center;
+height: auto;
     
   }
   .mural .container p{
     margin: 0;
     margin-top: 5%;
-    text-align: center;
+    
     font-size: 25px ;
   }
   
@@ -135,11 +140,13 @@ box-shadow: inset 10px 20px 250px rgba(46, 92, 255, 0.25);
     background-color: white;
     margin: 5px;
     border-radius: 3px;
+    animation-duration: 1s;
+    animation-name: aparecer;
   }
   #form_postagem{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center
   }
   #form_postagem input{
     width: 70px;
@@ -147,4 +154,57 @@ height: auto;
 font-size: 20px;
 font-family: 'Supernatural Knight', sans-serif;
 text-align: center;
+border-radius: 100%;
+width: 50px;
+height: 50px;
+border:dotted 3px black;
+caret-color: transparent;
+}
+#form_postagem input:focus{
+  box-shadow: 0 0 0 0;
+  outline: 0;
+  
+}
+
+#form_postagem input::-webkit-outer-spin-button,
+#form_postagem input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.mural .container  span{
+  font-size: 25px;
+}
+
+.textos{
+  display: flex;
+  flex-direction: row;
+  margin-top: 5%;
+  align-items: center;
+  
+}
+.textos #texto1{
+  margin-top: 0px;
+  font-size: 35px; 
+  margin-left:20px;
+}
+
+#form_postagem input{
+
+}
+.card1{
+display: flex;
+flex-wrap: nowrap ;
+margin: 20px;
+}
+.card1 span{
+  width: 75%;
+  padding: 0px  
+  
+}
+#inputs{
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
