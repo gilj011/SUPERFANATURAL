@@ -16,7 +16,124 @@
   <!-- <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet"> -->
-</head>
+        <style>
+          /* Estilos para a seção de história */
+          .historia {
+color: whitesmoke;
+            padding: 80px 0;
+          }
+        
+          .historia .container {
+           text-align: center;
+           flex-direction: column;
+          }
+        
+          .historia h2 {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 40px;
+         
+            text-transform: uppercase;
+          }
+        
+          .historia .historia-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+          }
+        
+          .historia .historia-img {
+            width: 80%;
+            margin-bottom: 40px;
+            display: flex;
+          }
+        
+          .historia .historia-img img {
+            max-width: 100%;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+          }
+        
+          .historia .historia-texto {
+            width: 100%;
+          }
+        
+          .historia p {
+            font-size: 20px;
+            line-height: 1.6;
+          
+            margin-bottom: 20px;
+          }
+          .jogo {
+color: whitesmoke;
+  padding: 30px 0;
+}
+
+.jogo .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.jogo h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.jogo-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.jogo-img {
+  margin-right: 20px;
+}
+
+.jogo-img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+
+.jogo-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #140aa3;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.jogo-button:hover {
+  background-color: #1b1ee6;
+}
+
+@media screen and (max-width: 768px) {
+  .jogo-content {
+    
+  }
+
+  .jogo-img {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+#imagemJogo{
+display: flex;
+flex-direction: column;
+text-align: center;
+font-size: 20px;
+}
+        </style>
+        
+      </head>
 
 <body id="body">
   <div id="personagemImg">
@@ -66,7 +183,7 @@
                 </p>
             </div>
         </div>
-        <div class="personagensCard">
+        <div onclick="window.location = 'personagens/sam.html'" class="personagensCard">
             <div class="container">
                 <span class="tituloPersonagem">Sam</span>
                 <div id="personagemImg">
@@ -79,7 +196,7 @@
                 </p>
             </div>
         </div>
-        <div class="personagensCard">
+        <div onclick="window.location = 'personagens/sam.html'" class="personagensCard">
             <div class="container">
                 <span class="tituloPersonagem">Castiel</span>
                 <div id="personagemImg">
@@ -92,7 +209,7 @@
                 </p>
             </div>
         </div>
-        <div class="personagensCard">
+        <div onclick="window.location = 'personagens/lucifer.html'"class="personagensCard">
             <div class="container">
                 <span class="tituloPersonagem">Lúcifer</span>
                 <div id="personagemImg">
@@ -169,24 +286,81 @@
   </div>
   <div id="navHistoria" class="historia">
     <div class="container">
-      <p>Quanto tempo eu passei assistindo supernatural?</p>
-      <a href="dashboard/mural.html">
+      
+      <h2>História</h2>
+      <div class="historia-content">
+        <div class="historia-img">
+          <p>
+            Supernatural é uma série de televisão americana de fantasia sombria e suspense criada por Eric Kripke.
+            A história gira em torno dos irmãos Sam e Dean Winchester, que viajam pelos Estados Unidos caçando criaturas
+            sobrenaturais, como fantasmas, demônios, vampiros, lobisomens, bruxas e muito mais.
+          </p><img src="assets/capas.jpg" width="40%" height="45%" alt="Imagem da série Supernatural">
+        </div>
 
-        <button>VEJA AQUI!</button>
-      </a>
+        <div class="historia-texto">
+         
+          <p>
+            Ao longo das temporadas, os irmãos enfrentam diversos desafios, exploram mitologias, lidam com seus próprios
+            demônios internos e descobrem segredos sobre seu passado e destino. Com uma combinação única de horror, ação,
+            drama e humor, Supernatural conquistou uma enorme base de fãs em todo o mundo ao longo dos seus 15 anos de
+            exibição.
+          </p>
+          <p>
+            A série foi ao ar pela primeira vez em 2005 e se tornou um fenômeno cultural, ganhando uma legião de fãs
+            dedicados conhecidos como "fandom". Supernatural é conhecida por sua narrativa envolvente, personagens
+            carismáticos, diálogos afiados e reviravoltas emocionantes.
+          </p>
+          <p>
+            Além dos irmãos Winchester, a série apresenta uma ampla variedade de personagens cativantes, incluindo
+            anjos, demônios, caçadores, criaturas místicas e até mesmo figuras históricas reinterpretadas no contexto
+            sobrenatural. Cada episódio leva os espectadores a uma nova aventura enquanto a trama principal se desenvolve
+            ao longo das temporadas.
+          </p>
+          <p>
+            Com seu final épico em 2020 após 15 temporadas, Supernatural deixou um legado duradouro na cultura pop e
+            continuará sendo amada pelos fãs como uma das séries mais icônicas e influentes do gênero sobrenatural.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 
+  <div class="jogo">
+    <div class="container">
+      <h2>Qual personagem você seria?</h2>
+  
+      <div class="jogo-content">
+        <div id="imagemJogo"class="jogo-img">
+ <img src="assets/interroga.png" alt="">
+        </div>  
+  
+        <button onclick="jogo()" class="jogo-button">Qual personagem você seria?</button>
+      </div>
+    </div>
+  </div>    
 
 
 
 
   <div class="footer">
     <div class="container">
-      <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
-      <span class="version">v1.0.0</span>
+      <h4>SUPERNATURAL</h4>
+      <span class="version">HORROR</span>
     </div>
   </div>
 </body>
 
 </html>
+<script>
+var aleatorio = (Math.random()*8).toFixed()
+var personagens = ['Sam','Dean','Castiel','Chuck','Lucifer','Miguel','Azazel','Crowley','Metatron']
+
+function jogo() { 
+  imagemJogo.innerHTML = ``
+  aleatorio = (Math.random()*8).toFixed()
+  imagemJogo.innerHTML = `${personagens[aleatorio]}`
+imagemJogo.innerHTML +=  `<img width="150px" height ="150px" style="border-radius:100%" src="assets/personagemjogo/${aleatorio}.jpg" alt="Imagem do jogo">`
+
+
+}
+</script>
