@@ -55,7 +55,7 @@
                     <!-- <img src="../assets/dean.gif" width="25%" height="25%" alt=""><br> -->
                 </div>
                 <div class="card1">
-                    <span style="margin: 0px;" class="p2">&nbsp;&nbsp;Nesta pagina temos um local onde podemos ver quais temporadas os fãs da série que compareceram nesse
+                    <span style="margin: 0px;   font-size: 25px;" class="p2">&nbsp;&nbsp;Nesta pagina temos um local onde podemos ver quais temporadas os fãs da série que compareceram nesse
                         site e compartilharam conosco o quanto apreciaram desta incrível que tanto amamos
                         Até qual temporada você assistiu ?</span>
                         <form id="form_postagem" method="post" onsubmit="return publicar()">
@@ -68,7 +68,12 @@
                     
 
                 </form>
-                <img id="deanGIF" style="display: none;" src="../assets/dean.gif" alt="" width="500px" height="400px">
+                <div id="gifResultado">
+
+                    <img id="deanGIF" style="display: none;" src="../assets/dean.gif" alt="" width="500px" height="400px"><div id="resultado">
+                        
+                    </div>
+                </div>      
                 <button style="display: none;
                 width: 300px;" class="btn-chart" id="btn_REDIRECT" onclick="irGrafico()" class="btn-chart">Ver grafico
                     de temporadas assistidas</button><br>
@@ -76,9 +81,7 @@
                 <button style="display: none;
                     width: 300px;" class="btn-chart" id="btn_CALCULO" onclick="calcTempo()" class="btn-chart">Ver o tempo assitindo
                     supernatural</button><br>
-                    <div id="resultado">
-
-                    </div>
+                    
             </div>
         </div>
     </div>
@@ -125,18 +128,18 @@
             segundo:0,
             dia:0
         }
-        calculo.episodio = (temporadaatual * 21).toFixed(2)
+        calculo.episodio = (temporadaatual * 21)
         calculo.minuto = (calculo.episodio * 42).toFixed(2)
-        calculo.hora = (calculo.minuto / 60).toFixed(2)
-        calculo.segundo = (calculo.minuto * 60).toFixed(2)
+        calculo.hora = (calculo.minuto / 60)
+        calculo.segundo = (calculo.minuto * 60)
         calculo.dia = (calculo.hora / 24).toFixed(2)
 
         resultado.innerHTML += `
-        <span>Você assistiu: ${calculo.episodio} episodios desupernatural</span><br> 
-        <span>Você assistiu: ${calculo.hora} horas de supernatural</span><br>
-        <span>Você passou: ${calculo.dia} dias vendo supernatural</span><br>
-        <span>Você assistiu: ${calculo.minuto} minutos de supernatural</span><br>
-        <span>Você passou: ${calculo.segundo} segundos assistindo supernatural</span><br>
+        <span>Você assistiu: ${calculo.episodio} episodios de supernatural</span><br> <br> 
+        <span>Você assistiu: ${calculo.hora} horas de supernatural</span><br><br> 
+        <span>Você passou: ${calculo.dia} dias vendo supernatural</span><br><br> 
+        <span>Você assistiu: ${calculo.minuto} minutos de supernatural</span><br><br> 
+        <span>Você passou: ${calculo.segundo} segundos assistindo supernatural</span><br><br> 
 
 
         `

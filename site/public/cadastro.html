@@ -142,12 +142,12 @@
 
             if (resposta.ok) {
                 cardErro.style.display = "block";
-
-                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+alert(`Cadastro realizado com sucesso, Redirecionando para pagina de login`)
+             
 
                 setTimeout(() => {
                     window.location = "login.html";
-                }, "2000")
+                }, "1000")
 
                 limparFormulario();
                 finalizarAguardar();

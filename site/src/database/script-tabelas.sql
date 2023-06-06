@@ -8,7 +8,7 @@ comandos para mysql - banco local - ambiente de desenvolvimento
 */
 
 
-);
+
 
 CREATE DATABASE aquatech;
 

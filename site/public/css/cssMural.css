@@ -18,6 +18,7 @@ body, html{
 
 
 
+
 :root {
   --tamanho-header: 80px;
   --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
@@ -110,7 +111,7 @@ align-items: center;
 
   .mural{
 width: 100%;
-height: auto;
+height: 130%;
 margin: auto;
 background: #000000;
 box-shadow: inset 10px 20px 250px rgba(46, 92, 255, 0.25);  
@@ -184,8 +185,10 @@ caret-color: transparent;
 }
 .textos #texto1{
   margin-top: 0px;
-  font-size: 35px; 
+  font-size: 25px; 
   margin-left:20px;
+}.textos .p2{
+
 }
 
 #form_postagem input{
@@ -207,4 +210,12 @@ margin: 20px;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+#gifResultado{
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+#gifResultado *{
+margin: 5px
 }
