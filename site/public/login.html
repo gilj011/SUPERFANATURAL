@@ -28,9 +28,9 @@
         <div class="container">
             <span class="titulo"></span>
             <div id="navbar">
-                <a href="#navHistoria">
+                <a href="index.html#navHistoria">
                     <h3>Historia</h3>
-                </a> <a href="#navPersonagens">
+                </a> <a href="index.html#navPersonagens">
                     <h3>Personagens</h3>
                 </a> <span class="titulo2"></span> <a href="login.html">
                     <h3>Login</h3>
@@ -131,7 +131,7 @@
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
                     sessionStorage.ID_USUARIO = json.idUsuario;
-
+alert('Logado com sucesso')
                     setTimeout(function () {
                         window.location = "./dashboard/mural.html";
                     }, 1000); // apenas para exibir o loading
@@ -141,7 +141,7 @@
             } else {
 
                 console.log("Houve um erro ao tentar realizar o login!");
-
+alert (`User ou senha incorretos   `)
                 resposta.text().then(texto => {
                     console.error(texto);
                     finalizarAguardar(texto);
